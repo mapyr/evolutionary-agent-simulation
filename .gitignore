@@ -1,0 +1,91 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+.python-version
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# PyTorch and numpy cache
+*.npz
+*.npy
+*.pt
+*.pth
+
+# Pygame & user cache
+*.sav
+*.dat
+
+# Data & debug output
+data/
+*.log
+*.stats
+.DS_Store
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor folders
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Mac OS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# PyInstaller
+*.spec
+
+# Coverage, test, and profiling
+.coverage
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+.cache/
+.tox/
+nosetests.xml
+test-results.xml
+
+# Documentation build
+docs/_build/
+docs/_static/
+docs/.doctrees
+
+# Temporary files
+*~
+*.swp
+*.tmp
+
+# Ignore screenshots if large
+docs/*.png
+docs/*.jpg
+
+# User-specific
+*.local
+*.env
+
+# Ignore any system-specific files or settings
+*.orig
