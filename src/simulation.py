@@ -54,7 +54,13 @@ class Simulation:
         self.ema_energy = 0.0
         self.ema_old_age = 0.0
 
-        self.device = "mps" if torch.backends.mps.is_available() else "cpu"
+        if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
+            self.device = "mps"
+        elif torch.cuda.is_available():
+            self.device = "cuda"
+        else:
+            self.device = "cpu"
+
         self.brain = BatchedLSTM(NN_INPUTS, NN_HIDDEN, NN_OUTPUTS, num_layers=NN_LAYERS, device=self.device)
 
         self.world_w, self.world_h = self.WIDTH // GRID_SIZE, self.HEIGHT // GRID_SIZE
